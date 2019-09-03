@@ -17,8 +17,8 @@ class InputPage extends StatefulWidget {
 
 class _InputPageState extends State<InputPage> {
   Gender selectedGender;
-  int height = 180;
-  int weight = 60;
+  int height = 60;
+  int weight = 180;
   int age = 20;
 
   @override
@@ -74,7 +74,7 @@ class _InputPageState extends State<InputPage> {
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: <Widget>[
                     Text(
-                      'Height(cm)',
+                      'Height(in)',
                       style: kLabelTextStyle,
                     ),
                     Row(
@@ -87,7 +87,7 @@ class _InputPageState extends State<InputPage> {
                           style: kNumberTextStyle,
                         ),
                         Text(
-                          'cm',
+                          'in',
                           style: kLabelTextStyle,
                         )
                       ],
@@ -104,8 +104,8 @@ class _InputPageState extends State<InputPage> {
                               RoundSliderOverlayShape(overlayRadius: 30.0)),
                       child: Slider(
                           value: height.toDouble(),
-                          min: 120.0,
-                          max: 220,
+                          min: 48.0,
+                          max: 108,
                           onChanged: (double newValue) {
                             setState(() {
                               height = newValue.round();
@@ -125,7 +125,7 @@ class _InputPageState extends State<InputPage> {
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: <Widget>[
                       Text(
-                        'WEIGHT(kg)',
+                        'WEIGHT(lbs)',
                         style: kLabelTextStyle,
                       ),
                       Text(
